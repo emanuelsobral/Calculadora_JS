@@ -58,7 +58,10 @@ input.addEventListener('keydown', function(e) {
     }
 })
 
-// Funcao para calcular
+// Define uma função chamada 'calculate'
 function calculate() {
-    console.log('Passou')
+    // Usa a função 'eval' para calcular o resultado da expressão matemática no campo de entrada
+    const result = eval(input.value)
+    // Atribui o resultado ao valor do campo de entrada 'resultInput'
+    resultInput.value = result
 }
