@@ -6,6 +6,17 @@ const resultInput = document.getElementById('result')
 // Define uma lista de teclas permitidas para a entrada do usuário
 const allowedKeys = ["(",")", "", "", "-", "+", "9", "8", "7", "6", "5", "4", "3", "2", "1", "0", ".", "%",""]
 
+// Seleciona todos os elementos com a classe 'charKey' na página
+document.querySelectorAll('.charKey').forEach(function (charKeyButton) {
+    // Para cada botão, adiciona um ouvinte de evento que é acionado quando o botão é clicado
+    charKeyButton.addEventListener('click', function() {
+        // Quando o botão é clicado, adiciona o valor do atributo 'data-value' do botão ao valor atual do campo de entrada
+        input.value += charKeyButton.dataset.value
+        // Adiciona o valor da variável 'value' ao valor atual do campo de entrada
+        input.value += value
+    })
+})
+
 // Adiciona um ouvinte de evento ao campo de entrada que é acionado quando uma tecla é pressionada
 input.addEventListener('keydown', function(e) {
     // Previne o comportamento padrão do evento keydown
@@ -31,6 +42,7 @@ input.addEventListener('keydown', function(e) {
     }
 })
 
+// Funcao para calcular
 function calculate() {
-    console.log('Calculando')
+
 }
