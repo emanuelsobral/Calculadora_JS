@@ -65,3 +65,9 @@ function calculate() {
     // Atribui o resultado ao valor do campo de entrada 'resultInput'
     resultInput.value = result
 }
+
+
+//Estou ciente de que a função eval pode representar um risco à segurança do código 
+//devido à possibilidade de exploração por usuários mal-intencionados. No entanto, 
+//gostaria de esclarecer que esta aplicação serve apenas como um exemplo 
+//para fins de aprendizado em JavaScript.
