@@ -23,6 +23,10 @@ document.querySelectorAll('.charKey').forEach(function (charKeyButton) {
 document.getElementById('clear').addEventListener('click', function() {
     // Quando o botão é clicado, limpa o campo input
     input.value = ''
+
+    // Quando o botão é clicado, limpa o campo placeholder
+    input.placeholder = ''
+
     // Foca no input ao botao ser clicado
     input.focus()
 })
@@ -31,6 +35,12 @@ document.getElementById('clear').addEventListener('click', function() {
 document.getElementById('equal').addEventListener('click', function() {
     // Quando o botão é clicado, inicia a funcao
     calculate()
+
+    // Adiciona o valor anterior ao placeholder
+    input.placeholder = input.value
+
+    // Limpa o campo  value
+    input.value = ''
 })
 
 // Adiciona um ouvinte de evento ao campo de entrada que é acionado quando uma tecla é pressionada
