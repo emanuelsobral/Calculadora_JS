@@ -24,3 +24,4 @@ input.addEventListener('keydown', function(e) {
         input.value = input.value.substring(0, input.value.length - 1)
     }
 })
+
