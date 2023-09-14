@@ -23,5 +23,14 @@ input.addEventListener('keydown', function(e) {
         // Se for a tecla 'Backspace', remove o último caractere do valor atual do campo de entrada
         input.value = input.value.substring(0, input.value.length - 1)
     }
+
+    // Verifica se a tecla pressionada é a tecla 'enter'
+    if (e.key === 'Enter') {
+        // Se for a tecla 'enter' inicia a funcao calculate
+        calculate()
+    }
 })
 
+function calculate() {
+    console.log('Calculando')
+}
