@@ -96,10 +96,16 @@ input.addEventListener('keydown', function(e) {
 
 // Define uma função chamada 'calculate'
 function calculate() {
-    // Usa a função 'eval' para calcular o resultado da expressão matemática no campo de entrada
+    // Define o valor do campo de entrada 'resultInput' como 'ERROR' e adiciona a classe 'error'
+    resultInput.value = 'ERROR'
+    resultInput.classList.add('error')
+
+    // Usa a função 'eval' para calcular o resultado da expressão matemática no campo de entrada 'input'
     const result = eval(input.value)
-    // Atribui o resultado ao valor do campo de entrada 'resultInput'
+    
+    // Atribui o resultado ao valor do campo de entrada 'resultInput' e remove a classe 'error'
     resultInput.value = result
+    resultInput.classList.remove('error')
 }
  
 // Adiciona um event listener ao botão com ID 'copyToClipboard'
@@ -111,7 +117,7 @@ const copyAndPaste = document.getElementById('copyToClipboard').addEventListener
         // Altera o texto do botão para 'Copied'
         button.innerText = 'Copied'
         // Adiciona a classe 'success' ao botão
-        button.classList.add('success')
+        button.classList.add('success') || resultInput.classList.add('success')
         // Copia o texto da entrada de resultado para a área de transferência
         window.navigator.clipboard.writeText(resultInput.value)
         // Inicia um temporizador de 2 segundos
@@ -119,7 +125,7 @@ const copyAndPaste = document.getElementById('copyToClipboard').addEventListener
             // Altera o texto do botão de volta para 'Copy'
             button.innerText = 'Copy';
             // Remove a classe 'success' do botão
-            button.classList.remove('success')
+            button.classList.remove('success') || resultInput.classList.remove('success')
          }, 2000);
     }
 })
