@@ -8,6 +8,10 @@ Este é um projeto assistido de uma calculadora web feita em HTML, CSS e JS. A c
 
 Para usar a calculadora, basta digitar os números e os operadores que deseja calcular e pressionar o botão "=" para ver o resultado. Você também pode usar as teclas do seu teclado para digitar os números e os operadores. Para copiar o resultado, clique no botão "copiar" ao lado do visor.
 
+## 🎨 Troca de temas 🎨
+
+A calculadora possui dois temas: claro e escuro. Você pode escolher o tema que mais te agrada clicando no botão "trocar tema" no canto superior direito da calculadora. O tema escolhido será salvo no local storage do seu navegador, para que você possa manter a sua preferência na próxima vez que usar a calculadora.
+
 ## 🔧 Como funciona 🔧
 
 A calculadora usa a função `eval` do JavaScript para realizar os cálculos. Essa função recebe uma string como argumento e executa o código contido nela. Por exemplo, se a string for `"2 + 2"`, a função `eval` retornará `4`.
