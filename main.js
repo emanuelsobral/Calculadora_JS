@@ -3,6 +3,20 @@ const root = document.querySelector('root')
 const input = document.getElementById('input') //getElementById Retorna o elemto de ID
 const resultInput = document.getElementById('result')
 
+// Adiciona um event listener ao botão com ID 'themeSwitcher'
+const switchTheme = document.getElementById('themeSwitcher').addEventListener('click', function() {
+    // Seleciona o corpo do documento
+    const theme = document.body
+    // Verifica se o corpo do documento tem a classe 'dark-theme'
+    if (theme.classList.contains('dark-theme')){
+        // Remove a classe 'dark-theme' se ela existir
+        theme.classList.remove('dark-theme')
+    } else {
+        // Adiciona a classe 'dark-theme' se ela não existir
+        theme.classList.add('dark-theme')
+    }
+})
+
 // Define uma lista de teclas permitidas para a entrada do usuário
 const allowedKeys = ["(",")", "", "", "-", "+", "9", "8", "7", "6", "5", "4", "3", "2", "1", "0", ".", "%",""]
 
@@ -75,7 +89,6 @@ function calculate() {
     // Atribui o resultado ao valor do campo de entrada 'resultInput'
     resultInput.value = result
 }
-
 
 //Estou ciente de que a função eval pode representar um risco à segurança do código 
 //devido à possibilidade de exploração por usuários mal-intencionados. No entanto, 

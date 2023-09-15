@@ -8,6 +8,16 @@
     --bg-color: #212529;
     --border-color: #666;
     --font-color: #f1f5f9;
+    --fonto-button-color: #212529;
+    --primary-color: #4dff91;
+    --error-color: #ff0043;
+  }
+
+  .dark-theme{
+    --bg-color: #EEEEEE;
+    --border-color: #212529;
+    --font-color: #212529;
+    --fonto-button-color: #212529;
     --primary-color: #4dff91;
     --error-color: #ff0043;
   }
