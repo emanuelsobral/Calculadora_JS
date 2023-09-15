@@ -104,7 +104,7 @@ function calculate() {
     const result = eval(input.value)
     
     // Atribui o resultado ao valor do campo de entrada 'resultInput' e remove a classe 'error'
-    resultInput.value = result
+    resultInput.value = result.toFixed(2)
     resultInput.classList.remove('error')
 }
  
