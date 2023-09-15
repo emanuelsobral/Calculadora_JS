@@ -2,7 +2,7 @@
 
 Este é um projeto assistido de uma calculadora web feita em HTML, CSS e JS. A calculadora possui todos os cálculos básicos, exibe o resultado e tem um botão que copia o resultado.
 
-![Screenshot da calculadora]
+![Screenshot da calculadora](https://ibb.co/XyJ0T3X)
 
 ## 📝 Como usar 📝
 
