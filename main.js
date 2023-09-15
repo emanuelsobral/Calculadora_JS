@@ -4,9 +4,12 @@ const input = document.getElementById('input') //getElementById Retorna o elemto
 const resultInput = document.getElementById('result')
 const theme = document.body
 
+// Verifica se o usuário já selecionou um tema anteriormente
 if (localStorage.theme == 'dark-theme') {
+    // Adiciona a classe 'dark-theme' se ela existir
     theme.classList.add('dark-theme')
 } else {
+    // Remove a classe 'dark-theme' se ela não existir
     theme.classList.remove('dark-theme')
 }
 
@@ -16,10 +19,12 @@ const switchTheme = document.getElementById('themeSwitcher').addEventListener('c
     if (theme.classList.contains('dark-theme')){
         // Remove a classe 'dark-theme' se ela existir
         theme.classList.remove('dark-theme')
+        //salvando escolha no local storage
         localStorage.theme = ""
     } else {
         // Adiciona a classe 'dark-theme' se ela não existir
         theme.classList.add('dark-theme')
+        //salvando escolha no local storage
         localStorage.theme = "dark-theme"
     }
 })
