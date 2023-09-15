@@ -2,18 +2,25 @@ const main = document.querySelector('main'); //querSelector Retorna o primeiro e
 const root = document.querySelector('root')
 const input = document.getElementById('input') //getElementById Retorna o elemto de ID
 const resultInput = document.getElementById('result')
+const theme = document.body
+
+if (localStorage.theme == 'dark-theme') {
+    theme.classList.add('dark-theme')
+} else {
+    theme.classList.remove('dark-theme')
+}
 
 // Adiciona um event listener ao botão com ID 'themeSwitcher'
 const switchTheme = document.getElementById('themeSwitcher').addEventListener('click', function() {
-    // Seleciona o corpo do documento
-    const theme = document.body
     // Verifica se o corpo do documento tem a classe 'dark-theme'
     if (theme.classList.contains('dark-theme')){
         // Remove a classe 'dark-theme' se ela existir
         theme.classList.remove('dark-theme')
+        localStorage.theme = ""
     } else {
         // Adiciona a classe 'dark-theme' se ela não existir
         theme.classList.add('dark-theme')
+        localStorage.theme = "dark-theme"
     }
 })
 
