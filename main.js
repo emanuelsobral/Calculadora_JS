@@ -30,7 +30,7 @@ const switchTheme = document.getElementById('themeSwitcher').addEventListener('c
 })
 
 // Define uma lista de teclas permitidas para a entrada do usuário
-const allowedKeys = ["(",")", "", "", "-", "+", "9", "8", "7", "6", "5", "4", "3", "2", "1", "0", ".", "%",""]
+const allowedKeys = ["(",")", "", "", "-", "+","*","/", "9", "8", "7", "6", "5", "4", "3", "2", "1", "0", ".", "%",""]
 
 // Seleciona todos os elementos com a classe 'charKey' na página
 document.querySelectorAll('.charKey').forEach(function (charKeyButton) {
@@ -101,6 +101,28 @@ function calculate() {
     // Atribui o resultado ao valor do campo de entrada 'resultInput'
     resultInput.value = result
 }
+ 
+// Adiciona um event listener ao botão com ID 'copyToClipboard'
+const copyAndPaste = document.getElementById('copyToClipboard').addEventListener('click', function (e) {
+    // Seleciona o botão que acionou o evento
+    const button = e.currentTarget
+    // Verifica se o texto do botão é 'Copy'
+    if (button.innerText == 'Copy') {
+        // Altera o texto do botão para 'Copied'
+        button.innerText = 'Copied'
+        // Adiciona a classe 'success' ao botão
+        button.classList.add('success')
+        // Copia o texto da entrada de resultado para a área de transferência
+        window.navigator.clipboard.writeText(resultInput.value)
+        // Inicia um temporizador de 2 segundos
+        setTimeout(() => {  
+            // Altera o texto do botão de volta para 'Copy'
+            button.innerText = 'Copy';
+            // Remove a classe 'success' do botão
+            button.classList.remove('success')
+         }, 2000);
+    }
+})
 
 //Estou ciente de que a função eval pode representar um risco à segurança do código 
 //devido à possibilidade de exploração por usuários mal-intencionados. No entanto, 
