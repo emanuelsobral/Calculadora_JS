@@ -4,6 +4,10 @@ Este é um projeto assistido de uma calculadora web feita em HTML, CSS e JS. A c
 
 ![Screenshot da calculadora](https://i.ibb.co/DGKcn84/Opera-Instant-neo-2023-09-15-131651-127-0-0-1.png)
 
+## 🌐 Visualização ao vivo
+
+Você pode ver este projeto ao vivo [aqui](https://emanuelsobral.github.io/Calculadora_JS/).
+
 ## 📝 Como usar 📝
 
 Para usar a calculadora, basta digitar os números e os operadores que deseja calcular e pressionar o botão "=" para ver o resultado. Você também pode usar as teclas do seu teclado para digitar os números e os operadores. Para copiar o resultado, clique no botão "copiar" ao lado do visor.
